@@ -1,26 +1,34 @@
 {
   "name": "angular-native-dragdrop",
-  "version": "1.2.2",
+  "version": "1.0.0",
   "description": "Angular HTML5 Drag and Drop directive written in pure with no dependency on JQuery.",
-  "main": "index.js",
+  "main": "dist/angular-dragdrop.js",
+  "module": "src/index.js",
   "scripts": {
-    "test": "gulp"
+    "build": "webpack --config webpack.config.js && webpack --config webpack.minified.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular-dragdrop/angular-dragdrop.git"
+    "url": "https://github.com/Farioch/angular-dragdrop.git"
   },
-  "author": "ganarajpr",
+  "author": "Farioch",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angular-dragdrop/angular-dragdrop/issues"
+    "url": "https://github.com/Farioch/angular-dragdrop/issues"
   },
   "homepage": "http://angular-dragdrop.github.io/angular-dragdrop",
+  "peerDependencies": {
+    "angular": ">=1.2.0"
+  },
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-jshint": "^1.9.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.4.2",
-    "jshint-stylish": "^1.0.1"
-  }
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {}
 }
